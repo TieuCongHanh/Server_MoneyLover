@@ -2691,7 +2691,7 @@ class BudgetController {
                 totals[type] += record.price;
             });
             totals["total"] = totals["revenue"] - totals["expense"];
-            totals["balance"] = balance.price;
+            totals["balance"] = balance.price +0;
             totals["cumulation"] = totals["total"] + totals["balance"];
 
             res.json(totals);
